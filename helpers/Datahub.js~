@@ -2,7 +2,8 @@ export const Brands = [
     require("../assets/Brands/Crocs.png"),
     require("../assets/Brands/Droors-Clothing.png"),
     require("../assets/Brands/New-Balance.png"),
-    require("../assets/Brands/Nike.png"), 
+    require("../assets/Brands/Nike.png"),
+    
         require("../assets/Brands/Adidas.png"),
     require("../assets/Brands/Puma.png"),
     require("../assets/Brands/Reebok.png"),

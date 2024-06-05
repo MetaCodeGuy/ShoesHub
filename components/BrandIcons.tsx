@@ -1,18 +1,20 @@
-import { View, Text, Image, Pressable } from 'react-native'
+import { View, Text,  TouchableOpacity } from 'react-native'
+import {Image} from "expo-image"
 import React from 'react'
 
  
 
 const BrandIcons = ({ImageData}:any) => {
-    console.log(ImageData);
-    
+     console.log("image data : ",ImageData)
   return (
-    <Pressable style={{width:60,height:60,marginHorizontal:10,borderWidth:1,borderColor:'gray',borderRadius:100,}}>
+    <TouchableOpacity style={{width:60,elevation:2,padding:10,backgroundColor:"white",height:60,marginHorizontal:10,borderRadius:100,}}>
       <Image 
       source={ImageData}
-      style={{flex:1,borderRadius:100,width:'100%',height:'100%'}}
+              transition={1000}
+      
+      style={{borderRadius:20,width:'100%',height:'100%'}}
        />
-    </Pressable>
+    </TouchableOpacity>
   )
 }
 

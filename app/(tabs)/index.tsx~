@@ -2,19 +2,15 @@ import OnboardingScreen from '@/components/Onboarding';
 import { Ionicons } from '@expo/vector-icons';
 import { Image } from 'expo-image';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { StyleSheet, Platform, SafeAreaView, Text, Button, View, TextInput, ScrollView, Pressable, FlatList } from 'react-native';
+import { Image, StyleSheet, Platform, SafeAreaView, Text, Button, View, TextInput, ScrollView, Pressable, FlatList } from 'react-native';
 import { Brands, NewArrivals } from "../../helpers/Datahub"
 import BrandIcons from '@/components/BrandIcons';
 import ProductPost from '@/components/ProductPost';
 import { StatusBar } from 'expo-status-bar';
-
-
 export default function HomeScreen() {
-
-
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white", }}>
-      <ScrollView showsVerticalScrollIndicator={false} >
+      <ScrollView>
         {/* header portion  */}
         <View style={{
           width: '100%',
@@ -42,17 +38,13 @@ export default function HomeScreen() {
           <Pressable style={{
 
           }}>
-          
             <Image
-              source={ 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F76502%2Fscreenshots%2F16131905%2F3d_character_user_pic_4x.png&f=1&nofb=1&ipt=573ecbd584f6c36dd6ae2259f62ac94abfa65c91415785d0610ee0ca8498ae7a&ipo=images' }
-                      transition={1000}
-              
+              source={{ uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F76502%2Fscreenshots%2F16131905%2F3d_character_user_pic_4x.png&f=1&nofb=1&ipt=573ecbd584f6c36dd6ae2259f62ac94abfa65c91415785d0610ee0ca8498ae7a&ipo=images' }}
               style={{
                 width: 50,
                 height: 50,
-                elevation:3,
                 marginLeft: 10,
-                borderRadius:25,
+                borderRadius: 50,
               }} 
             />
           </Pressable>
@@ -83,13 +75,11 @@ export default function HomeScreen() {
           style={{
             width: '95%',
             alignSelf: 'center',
-            elevation:3,
             height: 150,
             marginTop: 15,
-            borderRadius: 10, 
+            borderRadius: 10,
+
           }}
-      transition={1000}
-          
         />
 
 
