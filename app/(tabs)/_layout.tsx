@@ -20,6 +20,7 @@ export default function TabLayout() {
           bottom:20, 
           borderRadius:20,
           width:'auto',
+          alignSelf:'center',
           backgroundColor:'black',
           marginHorizontal:10,
           padding:10,
@@ -38,16 +39,16 @@ export default function TabLayout() {
         options={{
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={"#CEF207"} />
+            <TabBarIcon name={focused ? 'home' : 'home'} color={focused?"#CEF207":"white"} />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="cart"
         options={{
           title: 'Catr',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'cart' : 'cart-outline'} color={"#CEF207"} />
+            <TabBarIcon name={focused ? 'shopping-cart' : 'shopping-cart'} color={focused?"#CEF207":"white"} />
           ),
         }}
       />
@@ -56,7 +57,7 @@ export default function TabLayout() {
         options={{
           title: 'Whishlist',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'heart' : 'heart-outline'} color={"#CEF207"} />
+            <TabBarIcon name={focused ? 'heart' : 'heart'} color={focused?"#CEF207":"white"} />
           ),
         }}
       />
@@ -66,7 +67,7 @@ export default function TabLayout() {
         options={{
           title: 'Settings',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'settings' : 'settings-outline'} color={"#CEF207"} />
+            <TabBarIcon name={focused ? 'settings' : 'settings'} color={focused?"#CEF207":"white"} />
           ),
         }}
       />

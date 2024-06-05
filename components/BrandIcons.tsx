@@ -11,7 +11,6 @@ const BrandIcons = ({ImageData}:any) => {
       <Image 
       source={ImageData}
       style={{flex:1,borderRadius:100,width:'100%',height:'100%'}}
-      resizeMethod="scale"
        />
     </Pressable>
   )

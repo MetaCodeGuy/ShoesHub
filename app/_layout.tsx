@@ -17,6 +17,7 @@ export default function RootLayout() {
   const [isVisited, setIsVisited] = useState(false);
   const [fontloaded] = useFonts({
     poppins: require('../assets/fonts/poppinsreg.ttf'),
+    poppinsbold: require('../assets/fonts/poppinsbold.ttf'),
   });
 
   const CheckisVisited = () => {
@@ -50,6 +51,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name='products/[id]' options={{headerShown:false}}/>
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>

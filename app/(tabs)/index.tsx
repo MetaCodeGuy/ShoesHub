@@ -5,11 +5,11 @@ import { Image, StyleSheet, Platform, SafeAreaView, Text, Button, View, TextInpu
 import { Brands, NewArrivals } from "../../helpers/Datahub"
 import BrandIcons from '@/components/BrandIcons';
 import ProductPost from '@/components/ProductPost';
+import { StatusBar } from 'expo-status-bar';
 export default function HomeScreen() {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white", }}>
       <ScrollView>
-
         {/* header portion  */}
         <View style={{
           width: '100%',
@@ -30,27 +30,28 @@ export default function HomeScreen() {
             borderWidth: 1,
             flex: 1,
             borderColor: 'lightgray',
-
           }}>
             <Ionicons name='search' style={{ padding: 15 }} size={22} />
-            <TextInput style={{ flex: 1 ,fontFamily:'poppins'}}  placeholder='Search By Brand etc...' />
+            <TextInput style={{ flex: 1, fontFamily: 'poppins' }} placeholder='Search By Brand etc...' />
           </View>
-          <Pressable>
-          <Image
-          source={{uri:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F76502%2Fscreenshots%2F16131905%2F3d_character_user_pic_4x.png&f=1&nofb=1&ipt=573ecbd584f6c36dd6ae2259f62ac94abfa65c91415785d0610ee0ca8498ae7a&ipo=images'}}
-            style={{
-              width: 50,
-              height: 50,
-              marginLeft: 10,
-              borderRadius: 50, 
-            }}
-          />
-          </Pressable> 
+          <Pressable style={{
+
+          }}>
+            <Image
+              source={{ uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F76502%2Fscreenshots%2F16131905%2F3d_character_user_pic_4x.png&f=1&nofb=1&ipt=573ecbd584f6c36dd6ae2259f62ac94abfa65c91415785d0610ee0ca8498ae7a&ipo=images' }}
+              style={{
+                width: 50,
+                height: 50,
+                marginLeft: 10,
+                borderRadius: 50,
+              }} 
+            />
+          </Pressable>
         </View>
 
 
         {/* Brands */}
-        <Text style={{ paddingHorizontal: 10,fontFamily:'poppins' }}>Brands</Text>
+        <Text style={{ paddingHorizontal: 10, fontFamily: 'poppinsbold', fontSize: 18 }}>Brands</Text>
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -64,9 +65,6 @@ export default function HomeScreen() {
             })
           }
         </ScrollView>
-
-
-
 
         {/* discount Sale */}
 
@@ -86,9 +84,6 @@ export default function HomeScreen() {
 
         {/* new Arrival  */}
 
-
-
-
         <View style={{
           paddingVertical: 15,
           display: 'flex',
@@ -97,9 +92,9 @@ export default function HomeScreen() {
           alignItems: 'center',
           flexDirection: 'row',
         }}>
-          <Text style={{fontFamily:'poppins'}}>New Arrival</Text>
+          <Text style={{ fontFamily: 'poppinsbold', fontSize: 18 }}>New Arrival</Text>
           <Pressable>
-            <Text style={{ color: "green",fontFamily:'poppins' }}>see all</Text>
+            <Text style={{ color: "green", fontFamily: 'poppins' }}>see all</Text>
           </Pressable>
         </View>
         <ScrollView style={{
@@ -116,13 +111,14 @@ export default function HomeScreen() {
         >
           {
             NewArrivals.map((data) => {
-              return <ProductPost Imageurl={data.ProductImages} price={data.price} ProductName={data.ProductName} Data={data} />
+              return <ProductPost key={data.id} Imageurl={data.ProductImages} price={data.price} ProductName={data.ProductName} Data={data} />
             })
           }
         </ScrollView>
 
 
       </ScrollView>
+      <StatusBar style="dark" />
     </SafeAreaView>
   );
 }

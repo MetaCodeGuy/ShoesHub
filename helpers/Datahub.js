@@ -92,3 +92,31 @@ export const NewArrivals = [
 
     }
 ]
+
+
+export const CartItems = [
+    {
+        id:1,   
+        ProductImages:"https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bc8f8da3-6133-4cd4-be8c-ee7055d78baf/mercurial-vapor-15-academy-multi-ground-low-top-soccer-cleats-5DNpWz.png",
+        ProductName:"Air jordan 3 retro",
+        price:200,
+        quantity:1,
+        total:200,
+        size:"M",
+        color:"red",    
+        description:"Rise to the occasion is style that soars. This shoe reworks an icon's origianal magic with a platform sole and low cut silhouette.",
+
+    },
+    {
+        id:2,   
+        ProductImages:"https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/bc8f8da3-6133-4cd4-be8c-ee7055d78baf/mercurial-vapor-15-academy-multi-ground-low-top-soccer-cleats-5DNpWz.png",
+        ProductName:"Air jordan 3 retro",
+        price:200,
+        quantity:1,
+        total:200,
+        size:"M",
+        color:"red",    
+        description:"Rise to the occasion is style that soars. This shoe reworks an icon's origianal magic with a platform sole and low cut silhouette.",
+        
+    }
+]
