@@ -20,7 +20,7 @@ const CartScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1, padding: 10,backgroundColor:'white' }}>
       {/* Links To Navigate */}
-      <View style={{ flexDirection: 'row',  justifyContent: 'space-between' }}>
+      <View style={{ flexDirection: 'row',  justifyContent: 'space-between',paddingVertical:20, }}>
         
         <TouchableOpacity
         onPress={()=>router.back()}

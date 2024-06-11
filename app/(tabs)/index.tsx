@@ -14,7 +14,14 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white", }}>
-      <ScrollView showsVerticalScrollIndicator={false} >
+      <ScrollView showsVerticalScrollIndicator={false}
+      style={{
+      width:'100%',
+          backgroundColor:'white',
+          maxWidth:600,
+          alignSelf:'center'
+      }}
+       >
         {/* header portion  */}
         <View style={{
           width: '100%',
@@ -45,7 +52,7 @@ export default function HomeScreen() {
           
             <Image
               source={ 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F76502%2Fscreenshots%2F16131905%2F3d_character_user_pic_4x.png&f=1&nofb=1&ipt=573ecbd584f6c36dd6ae2259f62ac94abfa65c91415785d0610ee0ca8498ae7a&ipo=images' }
-                      transition={1000}
+                      transition={400}
               
               style={{
                 width: 50,
@@ -84,11 +91,11 @@ export default function HomeScreen() {
             width: '95%',
             alignSelf: 'center',
             elevation:3,
-            height: 150,
+            height: 170,
             marginTop: 15,
             borderRadius: 10, 
           }}
-      transition={1000}
+      transition={100}
           
         />
 

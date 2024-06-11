@@ -12,12 +12,14 @@ const Onboarding = ({ setIsVisited }: any) => {
     }}>
         
          <Image 
+         source={require('.././assets/images/applogo.png')}
      style={{
       width:'100%',
       minHeight:300,
-      height:"60%"       
+      maxHeight:650,
+      height:"70%"       
      }}
-             transition={1000}
+         transition={1000}
      
      resizeMode='cover'
      /> 

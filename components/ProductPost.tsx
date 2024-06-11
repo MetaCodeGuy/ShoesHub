@@ -16,7 +16,7 @@ const ProductPost = ({ Imageurl, ProductName ,Data,price}) => {
         }}>
             <Image
                 source={  Imageurl[0]  }
-                        transition={1000}
+                        transition={100}
                 
                 style={{
                     width: "100%",
@@ -24,11 +24,11 @@ const ProductPost = ({ Imageurl, ProductName ,Data,price}) => {
                     borderRadius: 30,
                     shadowColor:'black', 
                     shadowOffset:{
-                        width:4,
+                        width:0,
                         height:4,
                     },
-                    shadowOpacity:.3,
-                    shadowRadius:8
+                    shadowOpacity:.2,
+                    shadowRadius:4
 
                 }}
             />

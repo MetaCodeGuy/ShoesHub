@@ -40,7 +40,7 @@ const productinfo = () => {
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
 
       <ScrollView
-        style={{ flex: 1 }}
+        style={{ flex: 1,width:'100%',alignSelf:'center',maxWidth:600 }}
       >
         {/* Image Slider */}
         <View style={{
@@ -80,10 +80,10 @@ const productinfo = () => {
                 shadowColor: 'black',
                 shadowOffset: {
                   width: 0,
-                  height: 2
+                  height: 0
                 },
-                shadowOpacity: .3,
-                shadowRadius: 4,
+                shadowOpacity: .2,
+                shadowRadius: 2,
               }}>
               <Feather name="arrow-left" size={24} />
             </Pressable>

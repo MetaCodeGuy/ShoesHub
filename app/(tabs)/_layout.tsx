@@ -4,14 +4,16 @@ import React from 'react';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { View } from 'react-native';
+import { View ,Platform} from 'react-native';
+import {Dimensions} from 'react-native';
+
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const width =  Dimensions.get('window').width;
 
   return (
     <Tabs
-       
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
@@ -20,6 +22,9 @@ export default function TabLayout() {
           bottom:20, 
           borderRadius:20,
           width:'auto',
+          maxWidth:300,
+          left:'50%',
+            transform: [{translateX: Platform.OS == "web"?"-50%":-width/4}],
           alignSelf:'center',
           backgroundColor:'black',
           marginHorizontal:10,
@@ -74,3 +79,5 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
+
